@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1684
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppEcologiaHumana", "AppEcologiaHumana\AppEcologiaHumana.csproj", "{323991D4-0720-487C-8B44-1B68DAE1A4CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{BCA0805C-F9FF-4901-A093-19C5E73C2344}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{E91BF5A0-DD11-46BC-82F5-DC775AE2C3CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{323991D4-0720-487C-8B44-1B68DAE1A4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{323991D4-0720-487C-8B44-1B68DAE1A4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{323991D4-0720-487C-8B44-1B68DAE1A4CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{323991D4-0720-487C-8B44-1B68DAE1A4CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCA0805C-F9FF-4901-A093-19C5E73C2344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA0805C-F9FF-4901-A093-19C5E73C2344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA0805C-F9FF-4901-A093-19C5E73C2344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA0805C-F9FF-4901-A093-19C5E73C2344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E91BF5A0-DD11-46BC-82F5-DC775AE2C3CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E91BF5A0-DD11-46BC-82F5-DC775AE2C3CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E91BF5A0-DD11-46BC-82F5-DC775AE2C3CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E91BF5A0-DD11-46BC-82F5-DC775AE2C3CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94B25418-7182-4308-97A5-1FBC3630CA08}
+	EndGlobalSection
+EndGlobal
