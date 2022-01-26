@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -71,7 +72,16 @@
     <Content Include="assets\css\owl.video.play.html" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
+    <Content Include="assets\img\dimension1.png" />
+    <Content Include="assets\img\dimension2.png" />
+    <Content Include="assets\img\dimension3.png" />
+    <Content Include="assets\img\dimension4.png" />
     <Content Include="assets\img\favicon.png" />
+    <Content Include="assets\img\Imagen1.png" />
+    <Content Include="assets\img\Imagen2.png" />
+    <Content Include="assets\img\Imagen3.png" />
+    <Content Include="assets\img\Imagen4.png" />
+    <Content Include="assets\img\Imagen5.png" />
     <Content Include="assets\img\logo-icon.png" />
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\img\sample\avatar\avatar1.jpg" />
@@ -101,6 +111,7 @@
     <Content Include="assets\img\sample\photo\wide1.jpg" />
     <Content Include="assets\img\sample\photo\wide2.jpg" />
     <Content Include="assets\img\sample\photo\wide3.jpg" />
+    <Content Include="assets\img\statistics.png" />
     <Content Include="assets\js\base.js" />
     <Content Include="assets\js\lib\bootstrap.min.js" />
     <Content Include="assets\js\lib\jquery-3.4.1.min.js" />
@@ -110,13 +121,24 @@
     <Content Include="JavaScript\MasterJs.js" />
     <Content Include="Paginas\Consejos\frmConsejos.aspx" />
     <Content Include="Paginas\Dimensiones\frmDimension1.aspx" />
+    <Content Include="Paginas\Dimensiones\frmDimension2.aspx" />
+    <Content Include="Paginas\Dimensiones\frmDimension3.aspx" />
+    <Content Include="Paginas\Dimensiones\frmDimension4.aspx" />
     <Content Include="Paginas\frmCompletarPerfil.aspx" />
     <Content Include="Paginas\frmIndex.aspx" />
     <Content Include="Paginas\frmLogin.aspx" />
     <Content Include="Paginas\frmRecuperarContrasena.aspx" />
     <Content Include="Paginas\frmRegistro.aspx" />
+    <Content Include="Paginas\Mantenimientos\frmConsejos.aspx" />
+    <Content Include="Paginas\Mantenimientos\frmMantConsejos.aspx" />
+    <Content Include="Paginas\Mantenimientos\frmMantUsuarios.aspx" />
     <Content Include="Paginas\Mantenimientos\frmPreguntas.aspx" />
     <Content Include="Paginas\Mantenimientos\frmPreguntasDimension.aspx" />
+    <Content Include="Paginas\Mantenimientos\frmUsuarios.aspx" />
+    <Content Include="Paginas\Perfil\frmPerfil.aspx" />
+    <Content Include="Paginas\Perfil\frmProgreso.aspx" />
+    <Content Include="Paginas\Reportes\frmReporteResultados.aspx" />
+    <Content Include="Paginas\Reportes\frmReporteUsuarios.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -135,6 +157,27 @@
     </Compile>
     <Compile Include="Paginas\Dimensiones\frmDimension1.aspx.designer.cs">
       <DependentUpon>frmDimension1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Dimensiones\frmDimension2.aspx.cs">
+      <DependentUpon>frmDimension2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Dimensiones\frmDimension2.aspx.designer.cs">
+      <DependentUpon>frmDimension2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Dimensiones\frmDimension3.aspx.cs">
+      <DependentUpon>frmDimension3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Dimensiones\frmDimension3.aspx.designer.cs">
+      <DependentUpon>frmDimension3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Dimensiones\frmDimension4.aspx.cs">
+      <DependentUpon>frmDimension4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Dimensiones\frmDimension4.aspx.designer.cs">
+      <DependentUpon>frmDimension4.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\frmCompletarPerfil.aspx.cs">
       <DependentUpon>frmCompletarPerfil.aspx</DependentUpon>
@@ -171,6 +214,27 @@
     <Compile Include="Paginas\frmRegistro.aspx.designer.cs">
       <DependentUpon>frmRegistro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\Mantenimientos\frmConsejos.aspx.cs">
+      <DependentUpon>frmConsejos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Mantenimientos\frmConsejos.aspx.designer.cs">
+      <DependentUpon>frmConsejos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Mantenimientos\frmMantConsejos.aspx.cs">
+      <DependentUpon>frmMantConsejos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Mantenimientos\frmMantConsejos.aspx.designer.cs">
+      <DependentUpon>frmMantConsejos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Mantenimientos\frmMantUsuarios.aspx.cs">
+      <DependentUpon>frmMantUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Mantenimientos\frmMantUsuarios.aspx.designer.cs">
+      <DependentUpon>frmMantUsuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\Mantenimientos\frmPreguntas.aspx.cs">
       <DependentUpon>frmPreguntas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -184,6 +248,41 @@
     </Compile>
     <Compile Include="Paginas\Mantenimientos\frmPreguntasDimension.aspx.designer.cs">
       <DependentUpon>frmPreguntasDimension.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Mantenimientos\frmUsuarios.aspx.cs">
+      <DependentUpon>frmUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Mantenimientos\frmUsuarios.aspx.designer.cs">
+      <DependentUpon>frmUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Perfil\frmPerfil.aspx.cs">
+      <DependentUpon>frmPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Perfil\frmPerfil.aspx.designer.cs">
+      <DependentUpon>frmPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Perfil\frmProgreso.aspx.cs">
+      <DependentUpon>frmProgreso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Perfil\frmProgreso.aspx.designer.cs">
+      <DependentUpon>frmProgreso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Reportes\frmReporteResultados.aspx.cs">
+      <DependentUpon>frmReporteResultados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Reportes\frmReporteResultados.aspx.designer.cs">
+      <DependentUpon>frmReporteResultados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Reportes\frmReporteUsuarios.aspx.cs">
+      <DependentUpon>frmReporteUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Reportes\frmReporteUsuarios.aspx.designer.cs">
+      <DependentUpon>frmReporteUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -214,6 +313,7 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

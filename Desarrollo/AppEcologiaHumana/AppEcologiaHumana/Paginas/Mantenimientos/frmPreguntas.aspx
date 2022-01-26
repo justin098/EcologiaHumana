@@ -23,8 +23,6 @@
                                     <option value="2">Dimensión 2</option>
                                     <option value="3">Dimensión 3</option>
                                     <option value="4">Dimensión 4</option>
-                                    <option value="5">Dimensión 5</option>
-                                    <option value="6">Dimensión 6</option>
                                 </select>
                             </div>
                         </div>

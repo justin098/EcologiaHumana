@@ -15,4 +15,12 @@ namespace DAL.Mant
         public int Dimension { get; set; }
         public int IdUsuario { get; set; }
     }
+
+    public class Cls_ResultadoDimension_DAL
+    {
+        public int IdResultado { get; set; }
+        public int TotalResultado { get; set; }
+        public int Dimension { get; set; }
+        public int IdUsuario { get; set; }
+    }
 }

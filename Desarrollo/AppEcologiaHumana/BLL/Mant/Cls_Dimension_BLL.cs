@@ -39,6 +39,8 @@ namespace BLL.Mant
             }
             catch (Exception ex)
             {
+                sMsjError = ex.Message.ToString();
+
                 return null;
             }
 
@@ -76,6 +78,8 @@ namespace BLL.Mant
             }
             catch (Exception ex)
             {
+                sMsjError = ex.Message.ToString();
+
                 return null;
             }
 
@@ -112,6 +116,8 @@ namespace BLL.Mant
             }
             catch (Exception ex)
             {
+                sMsjError = ex.Message.ToString();
+
                 return null;
             }
 
@@ -239,6 +245,205 @@ namespace BLL.Mant
                 else
                 {
                     sMsjError = string.Empty;
+                    resultado = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                sMsjError = ex.Message.ToString();
+                resultado = false;
+            }
+
+            return resultado;
+
+        }
+
+
+        public int CalculoPreguntasDimension(ref string sMsjError, int dimension)
+        {
+
+            try
+            {
+                Cls_BLL_BD ObjBllCNX = new Cls_BLL_BD();
+                Cls_DAL_BD ObjDalBD = new Cls_DAL_BD();
+                ObjDalBD.sNombreTabla = "Dimensiones";
+                ObjBllCNX.CrearDTParametros(ref ObjDalBD);
+                ObjDalBD.dtParametros.Rows.Add("@Dimension", 1, dimension);
+                ObjDalBD.sSentencia = ConfigurationManager.AppSettings["SelectPreguntasDimension"];
+                ObjBllCNX.Ejec_DataAdap(ref ObjDalBD);
+
+                if (ObjDalBD.sMsgError.Trim() != string.Empty)
+                {
+
+                    sMsjError = ObjDalBD.sMsgError;
+
+                    return 0;
+                }
+                else
+                {
+
+                    sMsjError = string.Empty;
+
+                    int calculoPreg = (ObjDalBD.DS.Tables[0].Rows.Count) * 1000;
+
+                    return calculoPreg;
+                }
+            }
+            catch (Exception ex)
+            {
+                sMsjError = ex.Message.ToString();
+
+                return 0;
+            }
+        }
+
+        public DataTable ResultadoDimension(ref string sMsjError, int dimension, int usuario)
+        {
+
+            try
+            {
+                Cls_BLL_BD ObjBllCNX = new Cls_BLL_BD();
+                Cls_DAL_BD ObjDalBD = new Cls_DAL_BD();
+                ObjDalBD.sNombreTabla = "Dimensiones";
+                ObjBllCNX.CrearDTParametros(ref ObjDalBD);
+                ObjDalBD.dtParametros.Rows.Add("@Dimension", 1, dimension);
+                ObjDalBD.dtParametros.Rows.Add("@IdUsuario", 1, usuario);
+                ObjDalBD.sSentencia = ConfigurationManager.AppSettings["SelectResultadosDimensionDia"];
+                ObjBllCNX.Ejec_DataAdap(ref ObjDalBD);
+
+                if (ObjDalBD.sMsgError.Trim() != string.Empty)
+                {
+
+                    sMsjError = ObjDalBD.sMsgError;
+
+                    return null;
+                }
+                else
+                {
+
+                    sMsjError = string.Empty;
+
+                    return ObjDalBD.DS.Tables[0];
+                }
+            }
+            catch (Exception ex)
+            {
+                sMsjError = ex.Message.ToString();
+
+                return null;
+            }
+        }
+
+        public DataTable ResultadoDimensionGrafico(ref string sMsjError, int dimension, int usuario)
+        {
+
+            try
+            {
+                Cls_BLL_BD ObjBllCNX = new Cls_BLL_BD();
+                Cls_DAL_BD ObjDalBD = new Cls_DAL_BD();
+                ObjDalBD.sNombreTabla = "Dimensiones";
+                ObjBllCNX.CrearDTParametros(ref ObjDalBD);
+                ObjDalBD.dtParametros.Rows.Add("@Dimension", 1, dimension);
+                ObjDalBD.dtParametros.Rows.Add("@IdUsuario", 1, usuario);
+                ObjDalBD.sSentencia = ConfigurationManager.AppSettings["SelectResultadosDimension"];
+                ObjBllCNX.Ejec_DataAdap(ref ObjDalBD);
+
+                if (ObjDalBD.sMsgError.Trim() != string.Empty)
+                {
+
+                    sMsjError = ObjDalBD.sMsgError;
+
+                    return null;
+                }
+                else
+                {
+
+                    sMsjError = string.Empty;
+
+                    return ObjDalBD.DS.Tables[0];
+                }
+            }
+            catch (Exception ex)
+            {
+                sMsjError = ex.Message.ToString();
+                return null;
+            }
+        }
+
+        public int ResultadoDimensionTotal(ref string sMsjError, int dimension, int usuario)
+        {
+
+            try
+            {
+                Cls_BLL_BD ObjBllCNX = new Cls_BLL_BD();
+                Cls_DAL_BD ObjDalBD = new Cls_DAL_BD();
+                ObjDalBD.sNombreTabla = "Dimensiones";
+                ObjBllCNX.CrearDTParametros(ref ObjDalBD);
+                ObjDalBD.dtParametros.Rows.Add("@Dimension", 1, dimension);
+                ObjDalBD.dtParametros.Rows.Add("@IdUsuario", 1, usuario);
+                ObjDalBD.sSentencia = ConfigurationManager.AppSettings["SelectResultadosDimensionDia"];
+                ObjBllCNX.Ejec_DataAdap(ref ObjDalBD);
+
+                if (ObjDalBD.sMsgError.Trim() != string.Empty)
+                {
+
+                    sMsjError = ObjDalBD.sMsgError;
+
+                    return 0;
+                }
+                else
+                {
+
+                    sMsjError = string.Empty;
+                    int calculoPreg = 0;
+                    if (ObjDalBD.DS.Tables[0].Rows.Count > 0)
+                    {
+                        calculoPreg = Convert.ToInt32(ObjDalBD.DS.Tables[0].Rows[0]["TotalResultado"].ToString());
+                    }
+
+                    return calculoPreg;
+                }
+            }
+            catch (Exception ex)
+            {
+                sMsjError = ex.Message.ToString();
+
+                return 0;
+            }
+        }
+
+        public bool InsertarResultadoDimension(ref string sMsjError, ref Cls_ResultadoDimension_DAL objDimension)
+        {
+            bool resultado = false;
+
+            try
+            {
+                Cls_BLL_DesCNX objDes = new Cls_BLL_DesCNX();
+
+                Cls_BLL_BD ObjBllCNX = new Cls_BLL_BD();
+                Cls_DAL_BD ObjDalBD = new Cls_DAL_BD();
+
+                ObjBllCNX.CrearDTParametros(ref ObjDalBD);
+
+                ObjDalBD.dtParametros.Rows.Add("@TotalResultado", 3, objDimension.TotalResultado);
+                ObjDalBD.dtParametros.Rows.Add("@IdUsuario", 3, objDimension.IdUsuario);
+                ObjDalBD.dtParametros.Rows.Add("@Dimension", 3, objDimension.Dimension);
+
+
+
+                ObjDalBD.sSentencia = ConfigurationManager.AppSettings["InsertarResultadoDimension"];
+
+                ObjBllCNX.Ejec_Scalar(ref ObjDalBD);
+
+                if (ObjDalBD.sMsgError != string.Empty)
+                {
+                    sMsjError = ObjDalBD.sMsgError;
+                    resultado = false;
+                }
+                else
+                {
+                    sMsjError = string.Empty;
+                    objDimension.IdResultado = ObjDalBD.iValorScalar;
                     resultado = true;
                 }
             }

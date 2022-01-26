@@ -87,8 +87,6 @@
                                 <asp:ListItem Value="2"> Dimensión 2 </asp:ListItem>
                                 <asp:ListItem Value="3"> Dimensión 3 </asp:ListItem>
                                 <asp:ListItem Value="4"> Dimensión 4 </asp:ListItem>
-                                <asp:ListItem Value="5"> Dimensión 5 </asp:ListItem>
-                                <asp:ListItem Value="6"> Dimensión 6 </asp:ListItem>
                             </asp:DropDownList>
                         </div>
                     </div>

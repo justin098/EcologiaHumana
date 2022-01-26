@@ -3,7 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="appCapsule">
+
+    <div id="Div1" runat="server">
 
         <div class="section mt-2 mb-2">
 
@@ -13,13 +14,41 @@
                     <div class="in">
                         <div>
                             <h4>Dimensión 1</h4>
-                            <p>000/000</p>
+                            <p runat="server" id="lblResDim1">000/000</p>
                         </div>
                         <div class="img-wrapper">
                             <img src="../../assets/img/dimension1.png" alt="img" class="image-block imaged w48">
                         </div>
                     </div>
                 </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="dvMensaje" runat="server">
+        <div class="section mt-2 mb-2">
+
+            <div class="goals">
+                <!-- item -->
+                <div class="item">
+                    <div class="in">
+                        <div>
+                            <h4>Respuestas ya han sido enviadas para la dimensión 1, intentelo el día de mañana.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="appCapsule" runat="server">
+
+        <div class="section mt-2 mb-2">
+
+            <div class="goals">
+                <!-- item -->
                 <div class="item">
                     <div class="in">
                         <div>
@@ -79,24 +108,24 @@
                                     <div class="wide-block pt-2 pb-2">
 
                                         <div class="custom-control custom-checkbox mb-1">
-                                            <input type="checkbox" class="custom-control-input" name="group<%#Eval("IdPregunta")%>[]" id="Frec1-<%#Eval("IdPregunta")%>">
-                                            <label class="custom-control-label" for="Frec1-<%#Eval("IdPregunta")%>">Nunca</label>
+                                            <input type="checkbox" class="custom-control-input" name="group<%#Eval("IdPregunta")%>[]" id="Frec0-<%#Eval("IdPregunta")%>">
+                                            <label class="custom-control-label" for="Frec0-<%#Eval("IdPregunta")%>">Nunca</label>
                                         </div>
                                         <div class="custom-control custom-checkbox mb-1">
+                                            <input type="checkbox" class="custom-control-input" name="group<%#Eval("IdPregunta")%>[]" id="Frec1-<%#Eval("IdPregunta")%>">
+                                            <label class="custom-control-label" for="Frec1-<%#Eval("IdPregunta")%>">Pocas veces</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" name="group<%#Eval("IdPregunta")%>[]" id="Frec2-<%#Eval("IdPregunta")%>">
-                                            <label class="custom-control-label" for="Frec2-<%#Eval("IdPregunta")%>">Pocas veces</label>
+                                            <label class="custom-control-label" for="Frec2-<%#Eval("IdPregunta")%>">La mayoría de veces</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" name="group<%#Eval("IdPregunta")%>[]" id="Frec3-<%#Eval("IdPregunta")%>">
-                                            <label class="custom-control-label" for="Frec3-<%#Eval("IdPregunta")%>">La mayoría de veces</label>
+                                            <label class="custom-control-label" for="Frec3-<%#Eval("IdPregunta")%>">Siempre</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" name="group<%#Eval("IdPregunta")%>[]" id="Frec4-<%#Eval("IdPregunta")%>">
-                                            <label class="custom-control-label" for="Frec4-<%#Eval("IdPregunta")%>">Siempre</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" name="group<%#Eval("IdPregunta")%>[]" id="Frec5-<%#Eval("IdPregunta")%>">
-                                            <label class="custom-control-label" for="Frec5-<%#Eval("IdPregunta")%>">No aplica</label>
+                                            <label class="custom-control-label" for="Frec4-<%#Eval("IdPregunta")%>">No aplica</label>
                                         </div>
                                     </div>
                                 </div>
@@ -126,24 +155,24 @@
                                     <div class="wide-block pt-2 pb-2">
 
                                         <div class="custom-control custom-checkbox mb-1">
-                                            <input type="checkbox" class="custom-control-input" name="group2<%#Eval("IdPregunta")%>[]" id="Ten1-<%#Eval("IdPregunta")%>">
-                                            <label class="custom-control-label" for="Ten1-<%#Eval("IdPregunta")%>">Ninguno</label>
+                                            <input type="checkbox" class="custom-control-input" name="group2<%#Eval("IdPregunta")%>[]" id="Ten0-<%#Eval("IdPregunta")%>">
+                                            <label class="custom-control-label" for="Ten0-<%#Eval("IdPregunta")%>">Ninguno</label>
                                         </div>
                                         <div class="custom-control custom-checkbox mb-1">
+                                            <input type="checkbox" class="custom-control-input" name="group2<%#Eval("IdPregunta")%>[]" id="Ten1-<%#Eval("IdPregunta")%>">
+                                            <label class="custom-control-label" for="Ten1-<%#Eval("IdPregunta")%>">Menos de la mitad</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" name="group2<%#Eval("IdPregunta")%>[]" id="Ten2-<%#Eval("IdPregunta")%>">
-                                            <label class="custom-control-label" for="Ten2-<%#Eval("IdPregunta")%>">Menos de la mitad</label>
+                                            <label class="custom-control-label" for="Ten2-<%#Eval("IdPregunta")%>">Más de la mitad</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" name="group2<%#Eval("IdPregunta")%>[]" id="Ten3-<%#Eval("IdPregunta")%>">
-                                            <label class="custom-control-label" for="Ten3-<%#Eval("IdPregunta")%>">Más de la mitad</label>
+                                            <label class="custom-control-label" for="Ten3-<%#Eval("IdPregunta")%>">Todos</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" name="group2<%#Eval("IdPregunta")%>[]" id="Ten4-<%#Eval("IdPregunta")%>">
-                                            <label class="custom-control-label" for="Ten4-<%#Eval("IdPregunta")%>">Todos</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" name="group2<%#Eval("IdPregunta")%>[]" id="Ten5-<%#Eval("IdPregunta")%>">
-                                            <label class="custom-control-label" for="Ten5-<%#Eval("IdPregunta")%>">No aplica</label>
+                                            <label class="custom-control-label" for="Ten4-<%#Eval("IdPregunta")%>">No aplica</label>
                                         </div>
                                     </div>
                                 </div>
